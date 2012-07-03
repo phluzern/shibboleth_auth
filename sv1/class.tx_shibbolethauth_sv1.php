@@ -128,7 +128,9 @@ class tx_shibbolethauth_sv1 extends tx_sv_authbase {
 					$_procObj->onlyShibbolethFunc($this->remoteUser);
 				}
 			} else {
-				t3lib_BEfunc::typo3printError('Login error', '<h1>User ('.$this->remoteUser.') not found!</h1><h2><a href="'.$this->extConf['logoutHandler'].'">Shibboleth Logout</a></h2>');
+				/** @var $messageObj t3lib_message_ErrorPageMessage */
+				$messageObj = t3lib_div::makeInstance('t3lib_message_ErrorPageMessage', '<p>User (' . $this->remoteUser . ') not found!</p><p><a href="' . $this->extConf['logoutHandler'] . '">Shibboleth Logout</a></p>', 'Login error');
+				$messageObj->output();
 			}
 			foreach($_COOKIE as $key=>$val) unset($_COOKIE[$key]);
 			exit;
@@ -150,7 +152,7 @@ class tx_shibbolethauth_sv1 extends tx_sv_authbase {
 	 */
 	function authUser($user) {
 		$OK = 100;
-		
+
 		if (defined('TYPO3_cliMode')) {
 			$OK = 100;
 		} else if (($this->authInfo['loginType'] == 'FE') && !empty($this->login['uname'])) {
@@ -158,7 +160,6 @@ class tx_shibbolethauth_sv1 extends tx_sv_authbase {
 		} else if ($this->isShibbolethLogin() && !empty($user)
 			&& ($this->remoteUser == $user[$this->authInfo['db_user']['username_column']])) {
 			$OK = 200;
-			
 			if ($user['lockToDomain'] && $user['lockToDomain']!=$this->authInfo['HTTP_HOST']) {
 				// Lock domain didn't match, so error:
 				if ($this->writeAttemptLog) {
@@ -171,6 +172,9 @@ class tx_shibbolethauth_sv1 extends tx_sv_authbase {
 				$OK = 0;
 			}
 		} else {
+			debug($user);
+			debug($OK);
+			die();
 			// Failed login attempt (wrong password) - write that to the log!
 			if ($this->writeAttemptLog) {
 				$this->writelog(255,3,3,1,
@@ -178,7 +182,7 @@ class tx_shibbolethauth_sv1 extends tx_sv_authbase {
 					array($this->info['REMOTE_ADDR'], $this->info['REMOTE_HOST'], $this->remoteUser));
 				t3lib_div::sysLog(sprintf("Login-attempt from %s (%s), username '%s', password not accepted!", $this->authInfo['REMOTE_ADDR'], $this->authInfo['REMOTE_HOST'], $this->remoteUser), $this->extKey, 0 );
 			}
-			$OK = 0;
+			//$OK = 0;
 		}
 		
 		return $OK;
