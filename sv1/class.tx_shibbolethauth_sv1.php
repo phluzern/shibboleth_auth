@@ -171,10 +171,7 @@ class tx_shibbolethauth_sv1 extends tx_sv_authbase {
 				}
 				$OK = 0;
 			}
-		} else {
-			debug($user);
-			debug($OK);
-			die();
+		} /*else {
 			// Failed login attempt (wrong password) - write that to the log!
 			if ($this->writeAttemptLog) {
 				$this->writelog(255,3,3,1,
@@ -183,7 +180,7 @@ class tx_shibbolethauth_sv1 extends tx_sv_authbase {
 				t3lib_div::sysLog(sprintf("Login-attempt from %s (%s), username '%s', password not accepted!", $this->authInfo['REMOTE_ADDR'], $this->authInfo['REMOTE_HOST'], $this->remoteUser), $this->extKey, 0 );
 			}
 			//$OK = 0;
-		}
+		}*/
 		
 		return $OK;
 	}
