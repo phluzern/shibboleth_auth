@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<type>module</type>
+		<description>Language labels for plugin &quot;tx_univieshibboleth_pi1&quot;</description>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index="welcome_header">User login</label>
+			<label index="welcome_message">Enter your username and password here in order to log in on the website:</label>
+			<label index="logout_header">You have logged out.</label>
+			<label index="logout_message">You just logged out from your user session on this website. You can login again or as another user by the form below.</label>
+			<label index="error_header">Login failure</label>
+			<label index="error_message">An error occurred during login. Most likely you didn't enter the username or password correctly. Be certain that you enter them precisely as they are, including upper/lower case. Another possibility is that cookies might be disabled in your web browser.</label>
+			<label index="success_header">Login successful</label>
+			<label index="success_message">You are now logged in as '###USER###'</label>
+			<label index="status_header">Current status</label>
+			<label index="status_message">This is your current status:</label>
+			<label index="username">Username:</label>
+			<label index="password">Password:</label>
+			<label index="login">Login</label>
+			<label index="logout">Logout</label>
+			<label index="shibboleth_logout">If you want to close your Weblogin-Session, please click the following:</label>
+		</languageKey>
+		<languageKey index="de" type="array">
+			<label index="welcome_header">Benutzeranmeldung</label>
+			<label index="welcome_message">Bitte geben Sie Benutzernamen und Passwort ein, um sich einzuloggen.</label>
+			<label index="logout_header">Sie haben sich abgemeldet</label>
+			<label index="logout_message">Sie haben sich gerade von der Benutzersession abgemeldet.</label>
+			<label index="error_header">Login Fehler</label>
+			<label index="error_message">Bei der Authentifizierung ist ein Fehler aufgetreten. Bitte achten Sie darauf, dass in den Seiteneinstellungen "SSL enforce mode" auf "HTTPS" gesetzt ist.
+			Während der Anmeldung ist ein Fehler aufgetreten. Wahrscheinlich haben Sie Ihren Benutzernamen oder das Passwort falsch eingegeben. Vergewissern Sie sich, dass Sie beide Angaben korrekt eingegeben haben - Groß-/Kleinschreibung wird unterschieden. Eine andere Möglichkeit ist, dass Sie eventuell die Cookies in Ihrem Web-Browser deaktiviert haben.</label>
+			<label index="success_header">Login erfolgreich</label>
+			<label index="success_message">Sie sind nun eingeloggt als '###USER###'.</label>
+			<label index="status_header">Verbindungsstatus</label>
+			<label index="status_message">Hier sehen Sie ihren momentanen Verbindungsstatus.</label>
+			<label index="username">Benutzername:</label>
+			<label index="password">Passwort:</label>
+			<label index="login">Anmelden</label>
+			<label index="logout">Abmelden</label>
+			<label index="shibboleth_logout">Wenn sie ihre gesamte Weblogin-Sitzung beenden wollen, wählen sie bitte:</label>
+		</languageKey>
+	</data>
+</T3locallang>

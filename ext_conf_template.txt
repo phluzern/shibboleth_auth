@@ -1,0 +1,45 @@
+# cat=basic/enable; type=boolean; label=Backend: Enable Shibboleth authentication for the backend.
+enableBE = 0
+
+# cat=basic/enable; type=boolean; label=Frontend: Enable Shibboleth authentication for the frontend.
+enableFE = 0
+
+# cat=basic/enable; type=boolean; label=Auto Import: Enable Auto Import of Frontend Users
+enableAutoImport = 0
+
+# cat=basic/enable; type=boolean; label=BE_fetchUserIfNoSession: If this is enabled the service will always be called if there is no valid backend user session (Needed for singleSignOn). If not then the service will only be called if the authentification process sees incoming data from a form.
+BE_fetchUserIfNoSession = 1
+
+# cat=basic/enable; type=boolean; label=FE_fetchUserIfNoSession: If this is enabled the service will always be called if there is no valid frontend user session (Needed for singleSignOn). If not then the service will only be called if the authentification process sees incoming data from a form.
+FE_fetchUserIfNoSession = 0
+
+# cat=basic/enable; type=boolean; label=Force SSL (recommended): Check to enforce using SSL.
+forceSSL = 1
+
+# cat=basic/enable; type=boolean; label=Only Shibboleth Backend: Enable backend authentication against Shibboleth *only*.
+onlyShibbolethBE = 0
+
+# cat=basic; type=int+; label=Auth Priority: maximum 100
+priority = 100
+
+# cat=basic; type=int+; label=Storage Pid: Storage Folder for Frontend Users
+storagePid = 0
+
+# cat=basic; type=string; label=Shibboleth Login Handler
+loginHandler = /Shibboleth.sso/Login
+
+# cat=basic; type=string; label=Shibboleth Logout Handler
+logoutHandler = /Shibboleth.sso/Logout
+
+# cat=basic; type=string; label=Shibboleth UserID ServerVar
+remoteUser = REMOTE_USER
+
+# cat=basic; type=string; label=Shibboleth user email ServerVar
+mail = mail
+
+# cat=basic; type=string; label=Shibboleth displayName ServerVar
+displayName = displayName
+
+# cat=basic; type=string; label=Shibboleth eduPersonAffiliation ServerVar
+eduPersonAffiliation = affiliation
+
