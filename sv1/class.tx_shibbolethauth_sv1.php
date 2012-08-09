@@ -65,6 +65,11 @@ class tx_shibbolethauth_sv1 extends tx_sv_authbase {
 		if (defined('TYPO3_cliMode')) {
 			return parent::initAuth($mode, $loginData, $authInfo, $pObj);
 		}
+
+			// bypass Shibboleth login in favor of TYPO3 login by using ?typo3login in GET request
+		if (isset($_GET['typo3login'])) {
+			return parent::initAuth($mode, $loginData, $authInfo, $pObj);
+		}
 		
 		$this->login = $loginData;
 		if(empty($this->login['uname']) && empty($this->remoteUser)) {
