@@ -59,7 +59,7 @@ class tx_shibbolethauth_sv1 extends tx_sv_authbase {
 	 * @param	array		Submitted login form data
 	 * @param	array		Information array. Holds submitted form data etc.
 	 * @param	object		Parent object
-	 * @return	void
+	 * @return	mixed
 	 */
 	function initAuth($mode, $loginData, $authInfo, $pObj) {
 		if (defined('TYPO3_cliMode')) {
