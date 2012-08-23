@@ -92,9 +92,9 @@ class tx_shibbolethauth_sv1 extends tx_sv_authbase {
 				else $target .= '&';
 				$target .= 'logintype=login&pid='.$this->extConf['storagePid'];
 			}
-			$redirectUrl = $this->extConf['loginHandler'] . '?target=' . rawurlencode($target);
+			$redirectUrl = $this->extConf['loginHandler']; //. '?target=' . rawurlencode($target);
 			$redirectUrl = t3lib_div::sanitizeLocalUrl($redirectUrl);
-			
+
 			t3lib_utility_Http::redirect($redirectUrl);
 		} else {
 			$loginData['status'] = 'login';
