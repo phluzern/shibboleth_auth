@@ -73,7 +73,8 @@ class tx_shibbolethauth_sv1 extends tx_sv_authbase {
 		
 			// bypass Shibboleth login if enableFE is 0
 		if (!($this->extConf['enableFE']) && TYPO3_MODE == 'FE') {
-			return parent::initAuth($mode, $loginData, $authInfo, $pObj);
+			return FALSE;
+			// return parent::initAuth($mode, $loginData, $authInfo, $pObj);
 		}
 
 		$this->login = $loginData;
