@@ -11,4 +11,11 @@ t3lib_extMgm::addPlugin(array(
 	$_EXTKEY . '_pi1',
 	t3lib_extMgm::extRelPath($_EXTKEY) . 'ext_icon.gif'
 ),'list_type');
+
+$_EXTCONF = unserialize($GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf'][$_EXTKEY]);
+
+if (!empty($_EXTCONF['typo3LoginTemplate'])) {
+	$TBE_STYLES['htmlTemplates']['templates/login.html'] = $_EXTCONF['typo3LoginTemplate'];
+}
+
 ?>

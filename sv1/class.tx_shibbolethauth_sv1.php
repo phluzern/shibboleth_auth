@@ -78,7 +78,8 @@ class tx_shibbolethauth_sv1 extends tx_sv_authbase {
 
 		$this->login = $loginData;
 		if(empty($this->login['uname']) && empty($this->remoteUser)) {
-			$target = t3lib_div::getIndpEnv('TYPO3_REQUEST_URL');
+			return parent::initAuth($mode, $loginData, $authInfo, $pObj);
+/*			$target = t3lib_div::getIndpEnv('TYPO3_REQUEST_URL');
 			$target = t3lib_div::removeXSS($target);
 			if ($this->extConf['forceSSL'] && !t3lib_div::getIndpEnv('TYPO3_SSL')) {
 				$target = str_ireplace('http:', 'https:', $target);
@@ -95,7 +96,7 @@ class tx_shibbolethauth_sv1 extends tx_sv_authbase {
 			$redirectUrl = $this->extConf['loginHandler']; //. '?target=' . rawurlencode($target);
 			$redirectUrl = t3lib_div::sanitizeLocalUrl($redirectUrl);
 
-			t3lib_utility_Http::redirect($redirectUrl);
+			t3lib_utility_Http::redirect($redirectUrl);*/
 		} else {
 			$loginData['status'] = 'login';
 			parent::initAuth($mode, $loginData, $authInfo, $pObj);

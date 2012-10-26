@@ -45,4 +45,5 @@ t3lib_extMgm::addService($_EXTKEY, 'auth',  'tx_shibbolethauth_sv1',
 		'className' => 'tx_shibbolethauth_sv1',
 	)
 );
+
 ?>

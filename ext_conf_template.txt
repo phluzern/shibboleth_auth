@@ -43,3 +43,5 @@ displayName = displayName
 # cat=basic; type=string; label=Shibboleth eduPersonAffiliation ServerVar
 eduPersonAffiliation = affiliation
 
+# cat=basic; type=string; label=TYPO3 Login Template
+typo3LoginTemplate = FILE:fileadmin/templates/login/login.html
