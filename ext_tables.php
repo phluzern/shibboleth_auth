@@ -14,7 +14,7 @@ $GLOBALS['TCA']['tt_content']['types']['list']['subtypes_excludelist'][$_EXTKEY 
 $_EXTCONF = unserialize($GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf'][$_EXTKEY]);
 
 if (!empty($_EXTCONF['typo3LoginTemplate'])) {
-	$TBE_STYLES['htmlTemplates']['templates/login.html'] = $_EXTCONF['typo3LoginTemplate'];
+	$TBE_STYLES['htmlTemplates']['EXT:backend/Resources/Private/Templates/login.html'] = $_EXTCONF['typo3LoginTemplate'];
 }
 
 ?>
