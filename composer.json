@@ -1,5 +1,5 @@
 {
-  "name": "phluzern/shibboleth_auth",
+  "name": "shibboleth_auth",
   "type": "typo3-cms-extension",
   "description": "Add-on extension for phlu.ch Website",
   "homepage": "https://github.com/phluzern/shibboleth_auth",
