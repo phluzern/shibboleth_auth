@@ -1,7 +1,7 @@
 {
-  "name": "shibboleth_auth",
+  "name": "phluzern/shibboleth-auth",
   "type": "typo3-cms-extension",
-  "description": "Add-on extension for phlu.ch Website",
+  "description": "Shibboleth Authentication for TYPO3 CMS",
   "homepage": "https://github.com/phluzern/shibboleth_auth",
   "license": ["GPL-2.0+"]
 }
