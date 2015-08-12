@@ -1,5 +1,5 @@
 {
-  "name": "phluzern/shibboleth-auth",
+  "name": "shibboleth-auth",
   "type": "typo3-cms-extension",
   "description": "Shibboleth Authentication for TYPO3 CMS",
   "homepage": "https://github.com/phluzern/shibboleth_auth",
